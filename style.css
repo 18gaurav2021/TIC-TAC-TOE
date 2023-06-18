@@ -1,0 +1,27 @@
+body{
+    background-image: linear-gradient(to bottom right, lightyellow,red);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    cursor: pointer;
+  }
