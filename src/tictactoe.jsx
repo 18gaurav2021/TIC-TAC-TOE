@@ -49,13 +49,9 @@ const TicTacToe = () => {
       <div className="status">{status}</div>
       <div className="board">
         {board.map((value, index) => (
-          <button
-            key={index}
-            className="square"
-            onClick={() => handleClick(index)}
-          >
+          <Square key={index} value={value} onClick={() => handleClick(index)}>
             {value}
-          </button>
+          </Square>
         ))}
       </div>
       {(winner || !board.includes(null)) && (
@@ -68,3 +64,10 @@ const TicTacToe = () => {
 };
 
 export default TicTacToe;
+const Square = ({ value, onClick }) => {
+  return (
+    <button className="square" onClick={onClick}>
+      {value}
+    </button>
+  );
+};
